@@ -5,12 +5,13 @@ import { VscGear } from "react-icons/vsc";
 import { VscAccount } from "react-icons/vsc";
 import logo from "./Watercolor-Feather-PNG-Image.png";
 import { SiRoamresearch } from "react-icons/si";
+import Navbar from "./Navbar/Navbar";
 
 const Header = () => {
   return (
     <div className={styles.headerContainer}>
-      <div>
-        <VscListFlat className={styles.listFlat} />
+      <div className={styles.leftheader}>
+        <Navbar />
         <a href="#">
           <img
             className={styles.logoHeader}
@@ -34,7 +35,7 @@ const Header = () => {
           <VscAccount title="Login In" />
         </button>
 
-        <VscGear title="Settings" className={styles.headerSettings} />
+        {/* <VscGear title="Settings" className={styles.headerSettings} /> */}
       </div>
     </div>
   );
