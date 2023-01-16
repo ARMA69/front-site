@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { VscListFlat } from "react-icons/vsc";
+import { Link } from "react-router-dom";
+import MainLayout from "../../layouts/MainLayout";
+import Menu from "../Navigation/Menu";
+import Navigation from "../Navigation/Navigation";
 import styles from "./Navbar.module.sass";
+
 const Navbar = () => {
   const [menuActive, setMenuActive] = useState(false);
 
@@ -19,11 +24,7 @@ const Navbar = () => {
                 className={styles.menucontent}
                 onClick={(e) => e.stopPropagation()}
               >
-                <li>Home</li>
-                <li>Work</li>
-                <li>Relax</li>
-                <li>Doom</li>
-                <li>Ultimate</li>
+                <Menu />
               </ul>
             </div>
           </div>
