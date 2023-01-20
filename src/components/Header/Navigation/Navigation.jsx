@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import AnimalProducts from "../../Pages/AnimalProducts";
 import ArticlesForTheHome from "../../Pages/ArticlesForTheHome";
 import Electro from "../../Pages/Electro";

@@ -1,4 +1,4 @@
-import { BrowserRouter, Outlet } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Navigation from "./components/Header/Navigation/Navigation";

@@ -1,17 +1,18 @@
 import React from "react";
 import styles from "./Header.module.css";
-import { VscListFlat } from "react-icons/vsc";
-import { VscGear } from "react-icons/vsc";
-import { VscAccount } from "react-icons/vsc";
+
 import logo from "./Watercolor-Feather-PNG-Image.png";
 import { SiRoamresearch } from "react-icons/si";
 import Navbar from "./Navbar/Navbar";
+import UserMenu from "./UserPanel/UserMenu";
+import SettingsHeader from "./SettingsHeader/SettingsHeader";
 
 const Header = () => {
   return (
     <div className={styles.headerContainer}>
       <div className={styles.leftheader}>
         <Navbar />
+
         <a href=".">
           <img
             className={styles.logoHeader}
@@ -31,11 +32,8 @@ const Header = () => {
       </div>
 
       <div className={styles.rightDiv}>
-        <button href="#" className={styles.loginHeader}>
-          <VscAccount title="Login In" />
-        </button>
-
-        {/* <VscGear title="Settings" className={styles.headerSettings} /> */}
+        <UserMenu />
+        <SettingsHeader />
       </div>
     </div>
   );

@@ -33,24 +33,13 @@
 }
 
 .logoHeader {
-  padding-left: 50px;
+  padding-left: 15px;
   max-width: 150px;
   max-height: 40px;
 }
 
 .rightDiv {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  font-size: 40px;
-}
-.loginHeader {
-  font-size: 35px;
-  margin-top: 7px;
-  background-color: rgb(33, 33, 33);
-  text-decoration: none;
-  color: white;
-  border: none;
-}
-.headerSettings {
-  margin-left: 10px;
 }
