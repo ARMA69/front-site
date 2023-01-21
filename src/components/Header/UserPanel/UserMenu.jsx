@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./UserMenu.module.sass";
 import { VscAccount } from "react-icons/vsc";
+import { NavLink } from "react-router-dom";
 const UserMenu = () => {
   const [showActive, setShowActive] = useState(false);
 
@@ -17,12 +18,10 @@ const UserMenu = () => {
           <div className={styles.menu}>
             <div className={styles.blur}>
               <ul className={styles.menucontent}>
-                <li>Sing in</li>
+                <li>
+                  <NavLink to="/singup">Sing Up</NavLink>
+                </li>
                 <li>Registration</li>
-                <li>Profile</li>
-                <li>My things</li>
-                <li>My Views</li>
-                <li>Log Out</li>
               </ul>
             </div>
           </div>

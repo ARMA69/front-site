@@ -2,31 +2,29 @@
  font-size: 40px 
  cursor: pointer
 .menu
-  position: absolute 
-  top: -325px
-  right:  65px  
-  margin-top: 400px  
-  
+  position: fixed 
+
   .blur
    width: 100vw
-   height: 90vh
+   height: 100vh
    backdrop-filter: blur(0px)
-   position: absolute
-   top: -100px
-   left: -1855px
+   position: fixed
+   top: -25px
+   left: -20px
    display: flex
    flex-direction: row-reverse
    padding-bottom: 119px 
 
   .menucontent 
+   position: fixed
+   margin-top: 400px  
    margin: 100px 50px 0 0 
    display: flex
    flex-direction: column
    align-items: center
    width: 250px
-   height: 200px 
    border-radius: 5%   
-   background-color: rgb(33, 33, 33)   
+   background-color: var(--background-toggle)   
    li
     font-size: 19px
     padding: 2px
