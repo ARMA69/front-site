@@ -25,7 +25,7 @@ const Navbar = () => {
                 onClick={(e) => e.stopPropagation()}
               >
                 <li>
-                  <Menu />
+                  <Menu clickToggle={clickToggle} />
                 </li>
               </ul>
             </div>

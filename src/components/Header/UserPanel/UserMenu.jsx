@@ -19,9 +19,11 @@ const UserMenu = () => {
             <div className={styles.blur}>
               <ul className={styles.menucontent}>
                 <li>
+                  <NavLink to="/singin">Sing In</NavLink>
+                </li>
+                <li>
                   <NavLink to="/singup">Sing Up</NavLink>
                 </li>
-                <li>Registration</li>
               </ul>
             </div>
           </div>
