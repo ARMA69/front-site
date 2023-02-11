@@ -1,28 +1,59 @@
 import React from "react";
-import styles from "./SinglIn.module.sass";
+import { SCHEMA } from "../../Validations/loginValidations";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import styles from "./SingIn.module.sass";
 
-const SingIn = () => {
+const initialState = {
+  login: "",
+  password: "",
+};
+
+function SingIn(props) {
   return (
     <>
-      <div className={styles.singin}>
-        <h1>Log in to Project Banana</h1>
-        <form className={styles.form}>
-          <lable>
-            <span> Username </span>
-            <br /> <input type="text" className={styles.input} />
-          </lable>
-          <lable>
-            <span>Password </span> <br />
-            <input type="password" className={styles.input} />
-          </lable>
-          <lable>
-            <input type="checkbox" /> I have been here
-          </lable>
-          <button className={styles.button}>Log In</button>
-        </form>
-      </div>
+      <h1 className={styles.firstone}>Log in to Project Banana</h1>
+      <Formik
+        initialValues={initialState}
+        validationSchema={SCHEMA}
+        onSubmit={async (values, actions) => {
+          await new Promise((resolve) => setTimeout(resolve, 250));
+          alert(JSON.stringify(values, null, 2));
+          actions.resetForm();
+        }}
+        className={styles.singin}
+      >
+        {(formikProps) => {
+          return (
+            <Form className={styles.form}>
+              <p> Login: </p>
+              <Field
+                name="login"
+                placeholder="Enter you login"
+                className={styles.first}
+              />
+              <ErrorMessage
+                name="login"
+                component="p"
+                style={{ color: "red", fontSize: "21px" }}
+              />
+              <p> Password: </p>
+              <Field
+                type="password"
+                name="password"
+                placeholder="Enter your password"
+              />
+              <ErrorMessage
+                name="password"
+                component="p"
+                style={{ color: "red", fontSize: "21px" }}
+              />
+              <button value="submit"> Welcome </button>
+            </Form>
+          );
+        }}
+      </Formik>
     </>
   );
-};
+}
 
 export default SingIn;

@@ -9,12 +9,14 @@ import Home from "../../Pages/Home/Home";
 import MainLayout from "../../layouts/MainLayout";
 import SingUp from "../../Pages/SingUp/SingUp";
 import SingIn from "../../Pages/SingIn/SingIn";
+import MenuForWeek from "../../Pages/MenuForWeek/MenuForWeek";
 
 const Navigation = () => {
   return (
     <Routes>
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
+        <Route path="menu" element={<MenuForWeek />} />
         <Route path="products" element={<Products />} />
         <Route path="animalproducts" element={<AnimalProducts />} />
         <Route path="articlesforthehome" element={<ArticlesForTheHome />} />

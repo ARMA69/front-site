@@ -1,11 +1,11 @@
 import React from "react";
 
-const SingUp = () => {
+function SingUp() {
   return (
-    <div>
-      <h1>New Life</h1>
-    </div>
+    <>
+      <h1>Registration Form for Bananas</h1>
+    </>
   );
-};
+}
 
 export default SingUp;
