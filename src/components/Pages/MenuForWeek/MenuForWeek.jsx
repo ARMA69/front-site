@@ -4,7 +4,6 @@ import styles from "./MenuForWeek.module.sass";
 
 const MenuForWeek = () => {
   const { meals } = useContext(myContext);
-
   return (
     <>
       <h1 style={{ margin: "30px" }}>Meals </h1>
