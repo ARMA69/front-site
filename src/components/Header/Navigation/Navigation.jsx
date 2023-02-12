@@ -16,7 +16,7 @@ const Navigation = () => {
     <Routes>
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
-        <Route path="menu" element={<MenuForWeek />} />
+        <Route path="meals" element={<MenuForWeek />} />
         <Route path="products" element={<Products />} />
         <Route path="animalproducts" element={<AnimalProducts />} />
         <Route path="articlesforthehome" element={<ArticlesForTheHome />} />

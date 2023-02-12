@@ -11,8 +11,8 @@ const Menu = ({ clickToggle }) => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="menu" onClick={clickToggle}>
-            Menu for week
+          <NavLink to="meals" onClick={clickToggle}>
+            Meals
           </NavLink>
         </li>
         <li>
@@ -25,18 +25,6 @@ const Menu = ({ clickToggle }) => {
             Products
           </NavLink>
         </li>
-        {/* <li>
-          <NavLink to="electro">Electro </NavLink>
-        </li>
-        <li>
-          <NavLink to="animalproducts">Animal Products </NavLink>
-        </li>
-        <li>
-          <NavLink to="articlesforthehome">Articles For The Home </NavLink>
-        </li>
-        <li>
-          <NavLink to="frozenfood">Frozen Food </NavLink>
-        </li> */}
         <li>
           <NavLink to="wrong" onClick={clickToggle}>
             Not Found{" "}

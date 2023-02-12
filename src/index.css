@@ -40,7 +40,6 @@ a {
 }
 a:hover {
   color: var(--accent);
-  border-bottom: 1px solid var(--border);
 }
 ul {
   padding: 0;

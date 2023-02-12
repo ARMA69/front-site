@@ -1,10 +1,25 @@
-import { singleRandomMeal } from "../../APi/foodmenu";
+import React, { useContext } from "react";
+import { myContext } from "../../context/context";
+import styles from "./MenuForWeek.module.sass";
 
 const MenuForWeek = () => {
-  console.log(singleRandomMeal);
+  const { meals } = useContext(myContext);
+
   return (
     <>
-      <h1>Lookup a single random meal</h1>
+      <h1 style={{ margin: "30px" }}>Meals </h1>
+      <div className={styles.milsgrid}>
+        {meals ? (
+          meals.map((meal) => (
+            <div key={meal.idMeal} className={styles.food}>
+              <img src={meal.strMealThumb} alt="#" />
+              <h4 style={{ fontSize: "19px" }}>{meal.strMeal}</h4>
+            </div>
+          ))
+        ) : (
+          <h2>No Meals Found! Try abother word...</h2>
+        )}
+      </div>
     </>
   );
 };

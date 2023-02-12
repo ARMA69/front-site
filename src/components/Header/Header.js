@@ -1,8 +1,7 @@
 import React from "react";
 import styles from "./Header.module.sass";
-
+import SearchPlace from "./SearchPlace/SearchPlace";
 import logo from "./Watercolor-Feather-PNG-Image.png";
-import { SiRoamresearch } from "react-icons/si";
 import Navbar from "./Navbar/Navbar";
 import UserMenu from "./UserPanel/UserMenu";
 import SettingsHeader from "./SettingsHeader/SettingsHeader";
@@ -24,14 +23,7 @@ const Header = (props) => {
           />
         </Link>
       </div>
-      <div className={styles.searchBox}>
-        <input
-          type="search"
-          className={styles.searchHeader}
-          placeholder="   Search"
-        />
-        <SiRoamresearch className={styles.searchImg} title="Search" />
-      </div>
+      <SearchPlace />
 
       <div className={styles.rightDiv}>
         <UserMenu />
