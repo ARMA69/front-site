@@ -21,7 +21,7 @@ const SearchPlace = () => {
         <input
           className={styles.searchHeader}
           type="search"
-          placeholder="Type a meal name - Banana, Sandwich"
+          placeholder="Find Meals For Your Ingredients"
           value={search}
           onChange={handleSetSearch}
         />

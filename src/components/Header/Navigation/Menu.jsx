@@ -11,11 +11,6 @@ const Menu = ({ clickToggle }) => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="meals" onClick={clickToggle}>
-            Meals
-          </NavLink>
-        </li>
-        <li>
           <NavLink to="recipes" onClick={clickToggle}>
             Recipes
           </NavLink>
