@@ -25,9 +25,22 @@ export const AppContext = ({ children }) => {
     []
   );
 
+  const [open, setOpen] = useState(false);
+
+  const clickShowHandler = () => {
+    return setOpen(!open);
+  };
+
   return (
     <myContext.Provider
-      value={{ fetchHomePageMeals, meals, fetchHomePageRandomMeal, randomMeal }}
+      value={{
+        fetchHomePageMeals,
+        meals,
+        fetchHomePageRandomMeal,
+        randomMeal,
+        clickShowHandler,
+        open,
+      }}
     >
       {children}
     </myContext.Provider>
