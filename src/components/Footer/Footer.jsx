@@ -1,11 +1,20 @@
 import React from "react";
 import styles from "./Footer.module.sass";
+import { RxGithubLogo } from "react-icons/rx";
 
 const Footer = () => {
   return (
     <>
       <div className={styles.footer}>
-        <h1>Footer is here</h1>
+        <h3>
+          <a
+            href="https://github.com/ARMA69/front-site"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <RxGithubLogo /> GitHub Repositories
+          </a>
+        </h3>
       </div>
     </>
   );

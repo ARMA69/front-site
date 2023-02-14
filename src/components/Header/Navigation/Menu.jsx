@@ -6,22 +6,12 @@ const Menu = ({ clickToggle }) => {
     <nav className={styles.menu}>
       <ul className={styles.content}>
         <li>
-          <NavLink to="." onClick={clickToggle}>
+          <NavLink to="front-website" onClick={clickToggle}>
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink to="recipes" onClick={clickToggle}>
-            Recipes
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="products" onClick={clickToggle}>
-            Products
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="wrong" onClick={clickToggle}>
+          <NavLink to="front-website/wrong" onClick={clickToggle}>
             Not Found{" "}
           </NavLink>
         </li>

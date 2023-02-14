@@ -26,7 +26,11 @@ const SearchPlace = () => {
           onChange={handleSetSearch}
         />
 
-        <Link to="/meals" onClick={fetchMealsHandler} type="submit">
+        <Link
+          to="front-website/meals"
+          onClick={fetchMealsHandler}
+          type="submit"
+        >
           <SiRoamresearch title="Search" className={styles.searchimg} />
         </Link>
       </div>

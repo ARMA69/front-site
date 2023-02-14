@@ -14,7 +14,7 @@ const Header = (props) => {
       <div className={styles.leftheader}>
         <Navbar />
 
-        <Link to=".">
+        <Link to="/front-website">
           <img
             className={styles.logoHeader}
             src={logo}
