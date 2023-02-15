@@ -14,6 +14,7 @@ const SearchPlace = () => {
 
   const fetchMealsHandler = useCallback(() => {
     fetchHomePageMeals(search);
+    setSearch("");
   }, [search, fetchHomePageMeals]);
   return (
     <>
