@@ -27,7 +27,7 @@ const Home = () => {
                 <img
                   src={meal.strMealThumb}
                   onClick={clickShowHandler}
-                  alt=" meal"
+                  alt="meal"
                 />
                 <br />
                 <button
