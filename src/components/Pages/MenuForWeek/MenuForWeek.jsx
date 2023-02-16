@@ -11,8 +11,10 @@ const MenuForWeek = () => {
         {meals ? (
           meals.map((meal) => (
             <div key={meal.idMeal} className={styles.food}>
+              <h3 style={{ fontSize: "25px", marginBottom: "25px" }}>
+                {meal.strMeal}
+              </h3>
               <img src={meal.strMealThumb} alt="#" />
-              <h4 style={{ fontSize: "19px" }}>{meal.strMeal}</h4>
             </div>
           ))
         ) : (

@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { myContext } from "../../context/context";
 import styles from "./Home.module.sass";
 import Square from "../../Square/Square";
