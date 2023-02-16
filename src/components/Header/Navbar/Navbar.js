@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className={styles.navbar}>
+      <div>
         <VscListFlat className={styles.listflat} onClick={clickToggle} />
         {menuActive && (
           <div

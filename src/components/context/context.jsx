@@ -6,6 +6,7 @@ export const myContext = createContext();
 export const AppContext = ({ children }) => {
   const [meals, setMeals] = useState([]);
   const [randomMeal, setRandomMeal] = useState([]);
+  const [categoriesMeal, setCategoriesMeal] = useState([]);
 
   const fetchHomePageMeals = useCallback((search) => {
     axios
@@ -15,21 +16,29 @@ export const AppContext = ({ children }) => {
       });
   }, []);
 
-  const fetchHomePageRandomMeal = useCallback(
-    () =>
-      axios
-        .get(`https://www.themealdb.com/api/json/v1/1/random.php`)
-        .then((res) => {
-          setRandomMeal(res.data.meals);
-        }),
-    []
-  );
+  const fetchHomePageRandomMeal = useCallback(() => {
+    axios
+      .get(`https://www.themealdb.com/api/json/v1/1/random.php`)
+      .then((res) => {
+        // console.log(res.data);
+        setRandomMeal(res.data.meals);
+      });
+  }, []);
 
   const [open, setOpen] = useState(false);
 
   const clickShowHandler = () => {
     return setOpen(!open);
   };
+
+  const fetchCategories = useCallback(() => {
+    axios
+      .get(`https://www.themealdb.com/api/json/v1/1/categories.php`)
+      .then((res) => {
+        // console.log(res.data.categories);
+        setCategoriesMeal(res.data.categories);
+      });
+  }, []);
 
   return (
     <myContext.Provider
@@ -40,6 +49,8 @@ export const AppContext = ({ children }) => {
         randomMeal,
         clickShowHandler,
         open,
+        fetchCategories,
+        categoriesMeal,
       }}
     >
       {children}

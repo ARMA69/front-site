@@ -6,7 +6,7 @@ const MenuForWeek = () => {
   const { meals } = useContext(myContext);
   return (
     <>
-      <h1 style={{ margin: "30px" }}>Meals </h1>
+      <h1 style={{ margin: "30px", textAlign: "center" }}>Meals </h1>
       <div className={styles.milsgrid}>
         {meals ? (
           meals.map((meal) => (

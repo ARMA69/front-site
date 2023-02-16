@@ -9,7 +9,7 @@ const Home = () => {
 
   useEffect(() => {
     fetchHomePageRandomMeal();
-  }, [fetchHomePageRandomMeal]);
+  }, []);
 
   return (
     <>
