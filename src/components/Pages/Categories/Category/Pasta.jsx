@@ -16,7 +16,7 @@ const Pasta = () => {
               <h3 style={{ fontSize: "25px", marginBottom: "25px" }}>
                 {meal.strMeal}
               </h3>
-              <img src={meal.strMealThumb} />
+              <img src={meal.strMealThumb} alt={meal.strMeal}/>
             </div>
           ))}
         </div>

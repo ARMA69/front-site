@@ -18,10 +18,10 @@ const Categories = () => {
         <h1>Categories</h1>
         <div className={styles.grid}>
           {categoriesMeal.map((category) => (
-            <div>
+            <div key={category.idCategory}>
               <Link to={category.strCategory}>
                 <h2 style={{ textAlign: "center" }}>{category.strCategory}</h2>
-                <img src={category.strCategoryThumb} />
+                <img src={category.strCategoryThumb} alt={category.strCategory}/>
               </Link>
             </div>
           ))}
