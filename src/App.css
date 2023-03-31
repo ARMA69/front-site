@@ -1,5 +1,6 @@
 .App {
-  height: 100vh;
+  text-align: center;   
+  min-height: 100vh;
   height: auto;
   background-color: var(--background-page);
   color: var(--text-primary);

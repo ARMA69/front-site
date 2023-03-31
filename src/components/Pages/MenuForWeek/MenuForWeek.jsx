@@ -1,26 +1,49 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { myContext } from "../../context/context";
+import Square from "../../Square/Square";
 import styles from "./MenuForWeek.module.sass";
 
 const MenuForWeek = () => {
-  const { meals } = useContext(myContext);
+  const { fetchHomePageMeals, meals, mealId, fetchMealId,clickShowHandler, open } = useContext(myContext);
+  
+  const [id, setId] = useState('52772')
+  
+  const clickOpenHandler = (event) => {
+    setId(event.target.id)
+    return clickShowHandler();
+  };
+
+  useEffect(()=>{
+    fetchHomePageMeals();
+  }, [])
+
+  useEffect(() => {
+    fetchMealId(id);
+  }, [id]);
+  console.log(id)
   return (
     <>
-      <h1 style={{ margin: "30px", textAlign: "center" }}>Meals </h1>
+    <div className={styles.categories}>
+      <h1 >Meals </h1>
       <div className={styles.milsgrid}>
         {meals ? (
-          meals.map((meal) => (
-            <div key={meal.idMeal} className={styles.food}>
-              <h3 style={{ fontSize: "25px", marginBottom: "25px" }}>
-                {meal.strMeal}
-              </h3>
-              <img src={meal.strMealThumb} alt="#" />
-            </div>
-          ))
-        ) : (
-          <h2>No Meals Found! Try abother word...</h2>
+            meals.map((meal) => (
+              <div key={meal.idMeal} className={styles.food}>
+                  <h3  id={meal.idMeal} onClick={clickOpenHandler}>
+                  {meal.strMeal}
+                </h3>
+                <img src={meal.strMealThumb} id={meal.idMeal} onClick={clickOpenHandler} alt="#" />
+                        </div>
+            ))
+          ) : (
+          <h2>No Meals Found! Try another word...</h2>
         )}
+      
+       {open &&  <div >{mealId.map((meal)=> (
+        <Square key={meal.idMeal} meal={meal}/>
+      ))}</div>} 
       </div>
+    </div>
     </>
   );
 };
