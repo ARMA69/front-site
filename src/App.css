@@ -1,0 +1,12 @@
+.App {
+  height: 100vh;
+  height: auto;
+  background-color: var(--background-page);
+  color: var(--text-primary);
+  transition: all 0.5s;
+}
+
+.active {
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+}

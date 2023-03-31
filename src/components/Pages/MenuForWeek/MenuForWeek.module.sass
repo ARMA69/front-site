@@ -1,0 +1,48 @@
+.milsgrid
+ min-height: 87vh
+ height: auto 
+ width: 45%
+ margin: 0 auto
+ padding: 0 auto
+ display: grid
+ grid-template-columns: auto auto
+ justify-content: center
+ gap: 50px
+ @media (max-width: 1060px)
+  display: grid
+  grid-template-columns: auto
+  justify-content: center  
+ img
+  width: 95%
+  border: 5px solid var(--border)
+  transition: all 0.4s ease
+  border-radius: 10px   
+  &:hover
+   transform: scale(1.1) 
+ .square 
+  position: fixed
+  top: 9%
+  left: 33%
+  width: 666px
+  height: 685px
+  color: var(--text-primary)
+  background: var(--background-front)
+  border-radius: 15px
+  overflow-y: scroll
+  .linkbtn
+   font-size: 20px
+   transition: all 0.4s linear
+   &:hover
+    opacity: 0.8 
+
+  
+//  .mealsgrid
+//   display: flex
+//   align-items: center
+//   justify-content: space-evenly
+//   flex-direction: row
+//   flex-wrap: wrap  
+//   width: 400px
+//   .imgmeal
+//    height: 50px 
+//    width: 50px
