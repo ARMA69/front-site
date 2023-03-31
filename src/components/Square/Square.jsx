@@ -8,7 +8,7 @@ const Square = ({ meal }) => {
 
   return (
     <>
-      <div className={styles.square}>
+      <div className={styles.square} key={meal.idMeal}>
         <h1 style={{ margin: "10px" }}>
           {meal.strMeal}
           <span style={{ float: "right", cursor: "pointer" }}>

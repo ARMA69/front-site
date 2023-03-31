@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "../../Pages/NotFound";
 import Home from "../../Pages/Home/Home";
-import MainLayout from "../../layouts/MainLayout";
+import MainLayout from "../../../layouts/MainLayout";
 import SingUp from "../../Pages/SingUp/SingUp";
 import SingIn from "../../Pages/SingIn/SingIn";
 import MenuForWeek from "../../Pages/MenuForWeek/MenuForWeek";
