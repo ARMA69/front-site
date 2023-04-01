@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/front-website/static/css/main.ceb7f50a.css",
-    "main.js": "/front-website/static/js/main.4dc28be9.js",
+    "main.css": "/front-website/static/css/main.f4ddc7ec.css",
+    "main.js": "/front-website/static/js/main.0cba03d2.js",
     "static/media/Watercolor-Feather-PNG-Image.png": "/front-website/static/media/Watercolor-Feather-PNG-Image.7b91f840f7175d9ed886.png",
     "index.html": "/front-website/index.html",
-    "main.ceb7f50a.css.map": "/front-website/static/css/main.ceb7f50a.css.map",
-    "main.4dc28be9.js.map": "/front-website/static/js/main.4dc28be9.js.map"
+    "main.f4ddc7ec.css.map": "/front-website/static/css/main.f4ddc7ec.css.map",
+    "main.0cba03d2.js.map": "/front-website/static/js/main.0cba03d2.js.map"
   },
   "entrypoints": [
-    "static/css/main.ceb7f50a.css",
-    "static/js/main.4dc28be9.js"
+    "static/css/main.f4ddc7ec.css",
+    "static/js/main.0cba03d2.js"
   ]
 }
